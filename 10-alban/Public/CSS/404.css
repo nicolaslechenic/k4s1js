@@ -1,0 +1,17 @@
+.lego img {
+    width: 70%;
+}
+
+.error{
+    font-weight: bold;
+    
+}
+
+h2 {
+    text-align: center;
+    color: red;
+}
+h3{
+    text-align: center;
+    color: royalblue;
+}

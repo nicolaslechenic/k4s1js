@@ -1,0 +1,97 @@
+#slider {
+    position: relative;
+    width: 1280px;
+    margin: auto;
+}
+
+#slider > img {
+    height: 700px;
+}
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent, #slider:hover #suivant {
+    opacity: 1;
+}
+
+/*reglage du titre*/
+.container h1 {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+/*reglage des articles*/
+.presentation .row article {
+    /* width: 25%; */
+    margin: 20px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.35);
+}
+
+.presentation .row article img {
+    margin: 5%;
+    width: 90%;
+}
+
+.presentation .row article h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.presentation .row article .btn {
+    text-align: center;
+    width: 40%;
+    background-color: #ffaea0;
+    margin-bottom: 5%;
+    margin-left: 30%;
+}
+
+.container .diy {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.card {
+    text-align: center;
+    font-size: small;
+    margin: 20px 0;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+    margin: 5%;
+    width: 90%;
+}
+
+#newsletter img {
+    width: 100%;
+}
+
+#newsletter p {
+    text-align: center;
+    padding-top: 25px;
+    height: 70px;
+    background-color: rgb(202, 227, 218);
+}

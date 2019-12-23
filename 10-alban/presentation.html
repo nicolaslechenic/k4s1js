@@ -1,0 +1,135 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Bienvenue sur la presentation des differents produits de notre site.">
+    <meta name="keywords" content="presentation, produits">
+    <title>Présentation</title>
+    
+
+    <!-----------FEUILLE DE STYLE DU SLIDER---------------->
+
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+
+    <!------FEUILLE DE STYLE-------->
+
+
+    <link rel="stylesheet" href="Public/CSS/styles.css">
+    <link rel="stylesheet" href="Public/CSS/mobile.css">
+</head>
+
+<body>
+    <header class="front">
+        <!-------LOGIN-------->
+        <div class="connect">
+            <a href="login.html">Login</a>
+            <a href="inscription.html">Inscription</a>
+        </div>
+
+        <figure class="logo">
+            <img src="Public/Images/logos/les-fins-gourmets2.jpg" alt="les-fins-gourmets">
+        </figure>
+        <nav class="menuprincipal">
+            <!-------BURGER-------->
+            <input type="checkbox" id="menumobile" role="button">
+            <label for="menumobile" class="menumobile">
+                <img src="Public/Images/logos/burger.png">
+            </label>
+
+            <ul id="menuactive">
+                <li class="nav-item"><a href="index.html">Accueil</a></li>
+                <li class="nav-item"><a href="presentation.html">Présentation/à Propos</a></li>
+                <li class="nav-item"><a href="boutique.html">Boutique</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="contact.html">Contact/Accès</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+
+        <!---SLIDER----NIVO SLIDER-->
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="Public/Images/Photos/pain.jpg" alt="pain">
+                <img src="Public/Images/Photos/risoto.jpg" alt="risoto">
+            </div>
+        </div>
+
+
+        <h1>Présentation</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="pied">
+        <aside class="bas">
+
+
+            <div class="liens">
+                <ul>
+                    <li><a href="boutique.html"> Boutique</a></li>
+                    <li><a href="cgv.html"> CGV</a></li>
+                    <li><a href="plandusite.html">Plan du site</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="page-404.html">Newsletter</a></li>
+                    <li><a href="page-404.html">Agenda</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="reseaux">
+                <ul>
+                    <li><a href="#"><img src="Public/Images/pictos/facebook1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/instagram1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/twitter1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/pinterest1 (1).png"></a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <p>&copy; Greta 2019 tous droits réservés - <a href="mentionslegales.html">Mentions Légales</a></p>
+
+    </footer>
+
+
+    
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+
+<script type="text/javascript" src="Public/JS/active.js"></script>
+
+<script type="text/javascript">
+    menuActive(1);
+</script>
+
+
+</body>
+
+</html>

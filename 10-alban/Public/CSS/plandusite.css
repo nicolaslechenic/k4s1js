@@ -1,0 +1,21 @@
+.index{
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+    
+    
+}
+.index ul{
+    list-style-type: none;
+    
+    
+    
+}
+.index ul li a{
+    text-decoration: none;
+    color: #2b254e;
+
+}
+
+    

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>Jeux de mômes, nous contacter.</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- referencement -->
+        <meta name="keywords" content="contact mômes">
+        <meta
+            name="description"
+            content="Bienvenue sur notre site Jeux de mômes ! N'hésitez pas à nous contacter">
+        <!--faire une description différente pour chaque page-->
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+        <!-- feuilles de styles -->
+        <link rel="stylesheet" href="public/css/media.css">
+        <link rel="stylesheet" href="public/css/menu.css">
+        <link rel="stylesheet" href="public/css/style.css">
+        <!-- permets d'afficher les icons plus vite -->
+        <script src='https://kit.fontawesome.com/a076d05399.js' async></script>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <div class="container-fluid">
+            <header id="top" class="container-fluid-sm">
+                 <!-- barre connection -->
+                 <div
+                 id="connect"
+                 class="navbar navbar-expand-sm justify-content-end .fixed-top">
+                 <form class=" connexion form-inline " action="/action_page.php">
+                     <input
+                         class="connect form-control mr-sm-2 border border-warning btn-sm"
+                         type="email"
+                         placeholder="Mail"
+                         id="mailConnection"
+                         required
+                         >
+                     <input
+                         class="connect form-control mr-sm-2 border border-warning btn-sm"
+                         type="password"
+                         placeholder="Mot de passe"
+                         id="pwdConnection"
+                         required
+                         >
+                     <button
+                         id="login"
+                         class="btn btn-outline-warning font-weight-bold mr-3"
+                         type="submit">Se connecter</button>
+                 </form>
+                    <!-- modal button -->
+                    <button
+                        type="button"
+                        
+                        class="btn pl-3 m-1"
+                        data-toggle="modal"
+                        data-target="#myModal"><img
+                        src="public/pictos/question.png"
+                        alt="question"
+                        title="Pas encore inscit ?"></button>
+
+                    <!-- The Modal -->
+                    <div class="modal fade " id="myModal">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div id="titre" class="modal-header mb-3 justify-content-center">
+                                    <h4 class="modal-title">Bienvenue chez Jeux de mômes !</h4>
+                                </div>
+
+                                <!-- Modal body -->
+                                <form class="row" method="post" action="traitement.php">
+                                    <div class="input-group col-12 mb-2">
+                                        <div class="input-group-prepend col-3">
+                                            <select class="form-control" id="sel1">
+                                                <option>Madame</option>
+                                                <option>Monsieur</option>
+                                            </select>
+                                        </div>
+
+                                        <input type="text" class="form-control col-3" placeholder="nom" id="nomM" required  onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);">
+                                        <i id="mod" style='font-size:24px' class='fas col-1 mt-2'title=" ! = adresse manquante  X = format incorrect"></i>
+                                        
+                                        <input type="text" class="form-control col-3" placeholder="prénom" id="prenomM" required  onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);">
+                                        <i id="mod1" style='font-size:24px' class='fas col-1 mt-2'title=" ! = adresse manquante  X = format incorrect"></i>
+                                        
+                                    </div>
+                                    <!-- modal mail -->
+                                    <div class="input-group col-12 mb-3">
+                                        <label for="mailM" class="col-3">Adresse mail:</label>
+                                        <input
+                                            type="text"
+                                            class="col-8 form-control"
+                                            id="mailM"
+                                            placeholder="Your Email"
+                                            required>
+                                        
+                                            <i id="mod2" style='font-size:24px' class='fas col-1 mt-2'title=" ! = adresse manquante  X = format incorrect"></i>
+                                        
+                                    </div>
+                                    <!-- modal mdp -->
+                                    <div class="input-group col-12 mb-3">
+                                        <label for="pwdM" class="col-3">Password:</label>
+                                        <input 
+                                        type="password" 
+                                        class=" col-8 form-control" id="pwdM" name="password" required>
+                                        <i id="mod3" style='font-size:24px' class='fas col-1 mt-2'title=" ! = adresse manquante  X = format incorrect"></i>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        value="envoyer"
+                                        id="envoyer"
+                                        class="btnLogin btn col-3 mb-3 mx-auto">Envoyer</button>
+                                        <button 
+                                        type="reset" 
+                                        value="Annuler" id="" class="btncancel btn col-3 mb-3 mx-auto">Annuler</button>
+                                </form>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="row">
+                    <figure id="borderLogo" class=" rounded-circle shadow  bg-white">
+                        <img
+                            src="public/logos/jeux-de-momes2.png"
+                            alt="logo jeux de mômes"
+                            class="img-fluid"
+                            id="logo">
+                    </figure>
+                    <!-- menuprincipal -->
+                    <nav id="menu" class="navbar navbar-expand-md navbar-light">
+
+                        <button
+                            class=" menuBurger navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                            <img src="public/pictos/menu.png" alt="menu burger"/>
+                        </button>
+
+                        <!-- liens -->
+                        <div id="collapsibleNavbar" class="burger collapse navbar-collapse ">
+
+                            <ul id="menuActive" class=" navmenu navbar-nav justify-content-center" role="tablist">
+                                <li class="nav-item main-nav">
+
+                                    <a class="nav-link font-weight-bold text-white " href="index.html"><img src="public/pictos/bear.png" alt="icon ours">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="a-propos.html"><img src="public/pictos/penguin.png" alt="icon manchot">A propos</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="blog.html"><img src="public/pictos/ducky.png" alt="icon canard">Blog</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="boutique.html"><img src="public/pictos/fish.png" alt="icon poisson">Boutique</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="contact.html"><img src="public/pictos/bird.png" alt="icon piaf">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="pageContact container">
+                <!--post ou get plus pour moyen de recherche-->
+                <form id="myForm" class="contact container" action="traitement.php" method="post">
+                    <!-- crée une zone de bordure -->
+                    <fieldset class="contactHaut row m-3">
+                        <!-- nomme la zone -->
+                        <h3 class="col-12">Vos coordonnées</h3>
+                        <div class="colonne d-flex flex-column col- 12 col-sm-6">
+                            <!-- input radio= un seul choix-->
+                            <p>
+                                <input type="radio" name="civilite" value="M" id="monsieur"/>
+                                <label for="m" class="petit">M.</label>
+                                <input type="radio" name="civilité" value="Mme" id="madame"/>
+                                <label for="mme">Mme</label>
+                            </p>
+
+                            <p class="row">
+                                <!--on met les zones de text dans des paragraphes-->
+                                <label class="label col-3" for="nomC">Nom:
+                                </label>
+                                <input
+                                    class="form-control input col-6"
+                                    type="text"
+                                    name="nom"
+                                    id="nomC"
+                                    
+                                    placeholder=" ex : Mouse"
+                                    required="required"
+                                    onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+                                <img
+                                    
+                                    src=""
+                                    alt=""
+                                    id="valid"
+                                    title=" ! = nom manquant  X = format incorrect">
+                            </p>
+                            <p class="row">
+                                <label class="label col-3" for="prenomC">Prénom:
+                                </label>
+                                <input
+                                    class="form-control input col-6"
+                                    type="text"
+                                    name="prenom"
+                                    id="prenomC"
+                                    placeholder=" ex : Mickey"
+                                    required="required"
+                                    
+                                    onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+                                <img
+                                    
+                                    src=""
+                                    alt=""
+                                    id="valid1"
+                                    title=" ! = prénom manquant  X = format incorrect">
+                            </p>
+                            <p class="row">
+                                <label class="label col-3" for="mobileC">Téléphone:
+                                </label>
+                                <input
+                                    class="form-control input col-6"
+                                    type="tel"
+                                    name="mobile"
+                                    id="mobileC"
+                                    placeholder=" ex : 0276458714"
+                                    required="required"/>
+                                <img
+                               
+                                    src=""
+                                    alt=""
+                                    id="valid2"
+                                    title=" ! = numéros manquant  X = format incorrect">
+
+                            </p>
+
+                        </div>
+
+                        <div class="colonne col-12 col-sm-6 pt-5">
+
+                            <p class="row">
+                                <label class="label col-3" for="courrielC">Email:
+                                </label>
+                                <input
+                                    class="form-control col-8 col-sm-6"
+                                
+                                    type="email"
+                                    name="mail"
+                                    id="courrielC"
+                                    placeholder=" ex : mickey.mouse@gmail.com"
+                                    required="required"/>
+                                <img
+                                    
+                                    src=""
+                                    alt=""
+                                    id="valid3"
+                                    title=" ! = mail manquant  X = format incorrect">
+                            </p>
+                            <p class="row">
+                                <label class="label col-3" for="adresseC">Adresse:
+                                </label>
+                                <textarea
+                                    class="form-control col-8 col-sm-6"
+                                    name="adresse"
+                                    id="adresseC"
+                                    placeholder=" Votre adresse"
+                                    rows="4"
+                                    cols="40"
+                                    required="required"
+                                    onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);""></textarea>
+                                <img
+                                    
+                                    src=""
+                                    alt=""
+                                    id="valid4"
+                                    title=" ! = adresse manquante  X = format incorrect">
+
+                            </p>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="blocInput row m-3">
+                        <h3>Votre message et vos fichiers</h3>
+                        <p class="row ">
+                            <label id="text" class="label col-2" for="messageC">Le message:
+                            </label>
+                             
+                            <textarea
+                                class="form-control col-8 ml-5"
+                                name="mesage"
+                                id="messageC"
+                                placeholder=" N'hesitez pas à nous contacter. Nous vous répondrons aussi vite que possible !"
+                                rows="8"
+                                cols="80"
+                                wrap="soft"
+                                required="required"
+                                onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"></textarea>
+                                <img
+                                src=""
+                                alt=""
+                                id="valid5"
+                                title=" ! = adresse manquante  X = format incorrect">
+                        </p>
+                        <p class="row">
+                            <!-- input pour envoyer un ou des fichier en png,jpeg,jpg -->
+                            <label class="label" for="file">Sélectionner le fichier:
+                            </label>
+                            <input
+                                type="file"
+                                id="file"
+                                name="file"
+                                accept=".jpg, .jpeg, .png"
+                                multiple="multiple">
+
+                        </pclass="row">
+                    </fieldset>
+
+                    <!--boutons pour envoyer et annuler-->
+                    <p class="btnContact  row justify-content-center">
+                        <input type="submit" value="Envoyer" id="submit" class="clic col-3 col-sm-2">
+                        <input type="reset" value="Annuler" id="reset" class="clic col-3 col-sm-2">
+                    </p>
+                </form>
+
+                <div class="acces row m-3">
+                    <iframe class="col-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.3410572574403!2d-2.7631647843334592!3d47.65837047918812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48101e9a7877eaef%3A0x24eb73d362f87e6a!2sMairie%20de%20Vannes!5e0!3m2!1sfr!2sfr!4v1576755392536!5m2!1sfr!2sfr" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <address class="col-3 m-3">
+                        <span class="titreadresse">Jeux de mômes</span><br>
+                        Place des Fréres Lumiéres<br>
+                        77700 Chessy<br>
+                    </address>
+
+                </div>
+            </main>
+
+            <footer id="bottom" class="container-fluid-sm">
+                <div id="borderFoot" class="col-12"></div>
+                <div id="blocFoot" class="col-12">
+                    <div id="blocLiens" class="row">
+                        <div class=" liens liensmedia col-3">
+                            <h3>Nos coups de coeur</h3>
+                            <div class="col-12">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=qt_mLlfKuw4"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Yoga pour les petits</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.hugolescargot.com/coloriages/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Pleins de coloriages à imprimer !</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://tidou.fr/4-6-ans"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Jeux numériques à partir de 2 ans !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.leroymerlin.fr/v3/p/services/cours-de-bricolage/atelier-enfant-diy-1h30-2h-e1400662672"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Cours de briloges à partir de 6 ans !</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="liens liensmedia col-3">
+                            <h3>Notre liste utile</h3>
+                            <div class="col-12">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://www.parents.fr/enfant/sante/enfant-hyperactif/les-enfants-hyperactifs-78490"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Nos enfants hyperactifs !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.enfant.com/mode-de-garde/creche/ladaptation-en-creche-comment-ca-marche/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            La créche, par où commencer ?</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.pipi-au-lit.net/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Le pipi au lit !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.passeportsante.net/fr/grossesse/Fiche.aspx?doc=enceinte-vegetarienne"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Enceinte et végétarienne !</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=" liens col-6 col-sm-3">
+                            <h3>Nos idées boutiques</h3>
+                            <div class=" logo col-12 justify-content-center ">
+                                <a href="https://www.oxybul.com/"><img src="public/images/oxy.png" class="rounded-circle" alt="logo oxybul"></a>
+                                <a
+                                    href="https://www.king-jouet.com/jeux-jouets/jeux-eveil/activites-eveil/page1.htm"><img src="public/images/king.png" class="rounded-circle" alt="logo king jouet"></a>
+                                <a href="https://www.natureetdecouvertes.com/"><img
+                                    src="public/images/nature.png"
+                                    class="rounded-circle"
+                                    alt="logo nature et decouverte"></a>
+                                <a href="https://www.petit-bateau.fr/"><img
+                                    src="public/images/bateau.png"
+                                    class="rounded-circle"
+                                    alt="logo petit bateau"></a>
+                            </div>
+                        </div>
+                        <div class=" liens col-6 col-sm-3">
+                            <h3>Nos réseaux sociaux</h3>
+                            <div class="logo col-12">
+                                <a href="https://www.facebook.com/"><img src="public/pictos/picto-facebook.png" alt="facebook"></a>
+                                <a href="https://www.instagram.com/?hl=fr"><img src="public/pictos/picto-insta.png" alt="instagram"></a>
+                                <a href="https://www.youtube.com/"><img src="public/pictos/picto-youtube.png" alt="youtube"></a>
+                            </div>
+                            
+                        </div>
+                        <div class="mention col-12 m-2">
+                                &copy;2019 Jeux de mômes - Tous droits réservés -
+                                <a class="col-3" href="sitemap.xml">Plan du site - </a>
+                                <a class="col-3" href="politique.html">politique de confidentialité - </a>
+                                <a class="col-3" href="mentions.html">mentions légales</a>
+                        </div>
+                    </div>
+                    <div id="cookie-bar" style='display:none' onClick="hideNow(event)">>
+                        <div class="cookie">
+                                Ce site web utilise des cookies - 
+                            <a id='cookie-policy' href='cookie.html'>
+                                Consulter notre politique des cookies !
+                            </a>
+                                Vous préférez les p'tits Lu ? Vous pouvez stopper l'utilisation des cookies 
+                            <button id='stop-cookie'>en cliquant ici</button>
+                        
+                        Ou bien :
+                            <button id="agree" onClick="PopUp('hide')">J'accepte</button>
+                        </div>
+                    </div>       
+                </div>
+
+            </footer>
+        </div>
+        
+        <script src="public/js/modal.js"></script>
+        <script src="public/js/active.js"></script>
+        <script src="public/js/btnTop.js"></script>
+        <script src="public/js/contact.js"></script>
+        <script src="public/js/connect.js"></script>
+
+
+        <script>menuAct(4); </script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"defer></script>
+        <script
+            
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"defer></script>
+        <script
+            
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"defer></script>
+    </body>
+</html>

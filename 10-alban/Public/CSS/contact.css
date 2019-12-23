@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+
+}
+
+.contact fieldset {
+    border: 3px solid #000000;
+}
+
+.contact fieldset legend {
+    font-weight: bold;
+}
+
+/*-----MET DE LA MARGE ENTRE LES LABELS----*/
+.contact p {
+    margin: 10px 0;
+}
+
+/*-----ALIGNER LES LABEL EN VERTICAL*/
+.contact p label {
+    display: inline-block;
+/*---LES LABELS PEUVENT S'ALIGNER HORIZONTALEMENT EN PRENANT 130 PX DE LA LONGUEUR----*/
+    width: 130px;
+   
+}
+
+/*----SERT A CENTRER LES TEXTES INPUT---*/
+.contact fieldset input {
+    text-align: center;
+}
+
+/*----CENTRER LE TEXTAREA----*/
+.contact fieldset textarea {
+    margin-right: 140px;
+}
+
+.contact #bouton_envoie,
+.contact button[type=reset] {
+    /*---AGRANDI L'ESPACE INTERIEUR DE L'INPUT---*/
+    padding: 5px 15px;
+    background-color: grey;
+    border: none;
+    /*-----ARRONDIR LES BORDURES DES INPUT-----*/
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    /*---MET UNE MARGE ENTRE LES INPUT---*/
+    margin: 10px;
+
+
+}
+
+
+/*-------------SECTION MAP-------------*/
+.access {
+
+    border: 3px solid black;
+    padding: 30px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.access iframe {
+    padding-bottom: 30px;
+    
+}
+
+.titreadresse {
+
+    font-weight: bold;
+}

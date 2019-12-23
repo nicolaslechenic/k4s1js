@@ -1,0 +1,235 @@
+body
+ {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+ }
+ .section
+ {
+    padding: 30px;
+    width: 100%;
+ }
+ .sectionTitle
+ {
+   text-align: center;
+   padding-bottom: 30px;
+   padding-top: 40px;
+ }
+/* header and menu styling*/
+#topnav
+{
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+  
+}
+.logo
+{
+  flex-basis:30%;
+}
+#logo
+{
+  max-width: 120px;
+  height: auto;
+}
+#menuLinks
+{
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  
+  list-style-type: none;
+}
+#menuLinks li
+{
+  padding-right: 20px;
+}
+ #navBar  a
+ {
+    color: grey;
+ }
+ #navBar  a:hover 
+{
+   text-decoration: none;
+    background-color:rgba(202, 249, 204, 0.3);
+    
+}
+ .icon 
+ {
+  display: none;
+}
+.active
+{
+  background-color: #CAF9CC;
+}
+/* CAROUSEL*/
+#wrapper
+{
+    display: flex;
+    justify-content: space-between;
+}
+/* section*/
+.section
+{
+  padding-top:50px;
+}
+
+.article
+{
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  align-items: center;
+  background: #CAF9CC;
+}
+#accueilSlogan
+{
+  flex-basis: 30%;
+  
+  
+}
+#accueilSlogan h1
+{
+  font-size: 4rem;
+}
+#slButtons
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* CONTACT US PAGE*/
+
+#contact p
+{
+  font: cabinitalic, Arial;
+  
+  padding-bottom: 0; 
+  padding-top: 1.2em;
+  margin: 0;
+  
+  
+} 
+
+/*  COOKIES*/
+#cookie-bar
+{
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 24px 0;
+  margin: 0;
+  background: rgba(104, 186, 138, 0.9);
+  color: #383636;
+  font: 14px arial, sans-serif;
+}
+#cookiesMessage
+{
+  display:flex;
+  justify-content:center;
+  font-family: Arial;
+}
+#cookie-bar span
+{
+  margin-right: 20px;
+}
+#cookie-policy
+{
+  color: #768085;
+  font-weight: bold;
+  margin-right: 20px;
+}
+#cookie-bar .agree
+{
+  background-color: #666769;
+  border: none;
+  color: white;
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 16px;
+  margin: 4px 15px;
+  cursor: pointer;
+  
+}
+
+
+
+@media all and (max-width: 768px)
+{
+
+  
+  #menu #intFlex
+  {
+    display: block;
+    width: 120%;
+  }
+
+
+  i 
+  {
+    color: #CACBCD;
+    margin: 10px;
+    min-height: 20px;
+  }
+
+  #myLinks ul
+  {
+    
+    display: block;
+    margin-top: -15px;
+    padding-right: 16px;
+  }
+
+  .icon
+  {
+   
+   background-color: #01385C; 
+   display: block;   
+  }  
+  
+ 
+
+  #myLinks a
+  {
+    font: 3.5vw cabinitalic, Arial;
+    color:  #CACBCD;
+    text-decoration: none;
+  }
+
+  .topLine
+  {
+    font-size: 6.5vw;
+    opacity: 0.28;
+  }
+
+  .topnav #myLinks 
+  {
+    display: none;
+  }
+
+  #logo
+  {
+    width: 30vw;
+    height: auto;
+    margin-left: -20px;
+  }
+  
+  #me 
+  {
+    display: none;
+  } 
+
+  #section_contactForm
+{
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+  
+}

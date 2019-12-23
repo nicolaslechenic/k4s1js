@@ -1,0 +1,3 @@
+User-agent:*
+Disallow:
+Sitemap:https://www.jeuxdemome.com/sitemap.xml

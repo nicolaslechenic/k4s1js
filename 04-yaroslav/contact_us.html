@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="locastaff.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+	<body> 
+		<<div id="blocpage">
+        <header>
+            <div id="topnav">
+              <div class="logo">
+                  <a href="#home" ><img id="logo"src="logos/loca-staff2.png" alt="logo" id="logo_top"></a>
+              </div>              
+              <div class="button">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        </a>
+              </div>                  
+                <ul id="navBar">
+                    <li><a class="link " href="index.html">Accueil </a></li>
+                    <li><a class="link" href="#apropos"> A propos </a></li>
+                    <li><a  class="link" href="#"> Boutique </a></li>
+                    <li><a  class="link" href="#"> Blog </a></li>
+                    <li><a  class="link active" href="contact_us.html"> Contact </a></li>
+                    <li><a  class="link" href="#"> Se connecte </a></li>
+                </ul>
+                <script>
+                var header = document.getElementById("navBar");
+                var btns = header.getElementsByClassName("link");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function() {
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                  });
+                }
+                </script>
+                 
+            </div>
+            
+        </header>   
+    <section id="section_contactForm">
+		<form action="mail.php" method="POST" id="contact">
+      <fieldset><legend>Contactez-nous</legend>
+        <p>Sex:</p>
+        Masculin<input type="radio" name="sexe" value="male">   
+        Féminin<input type="radio" name="sexe" value="female"> <br>
+        <p><label for="nom">Nom </label></p>
+				<input type="text" name="name" id="nom">
+				<p><label for="email">Email </label></p><input type="text" name="email" id="email" placeholder="Votre email"> 	
+				<p><label for="objet">Objet </label></p><input type="text" name="objet" id="objet">
+				<p><label for="message">Message : </label></p><textarea name="message" id="message" cols="30" rows="8"></textarea>
+			</fieldset></br>
+			<input type="submit" name="submit" value="Envoyer !">
+		</form>
+	</section>
+		 <footer class="footer"> 
+                        <div class="insideFooter">
+                            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="blank" class="emailIcon"><img src="images/at.png" alt="Email us link"></a>
+                            <a href="https://fr.linkedin.com"  target="blank" class="linkedinIcon"><img src="images/linkedin.png" alt="Link to Linkedin page"></a> 
+                            <div class="copyright">&copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, GRH Formation.</div>
+                        </div>   
+                        
+            </footer> 
+
+
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+        <script>
+            var email = document.getElementById("email");
+    
+            email.addEventListener("keyup", function (event) {
+            if(email.validity.typeMismatch) {
+                email.setCustomValidity("J'attend un e-mail, mon cher !");
+            } else {
+                email.setCustomValidity("");
+            }
+            });
+        </script>
+
+  </div>
+	</body>
+</html>		

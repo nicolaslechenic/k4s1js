@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: 
+Sitemap: https://www.verte-nature.com/sitemap.xml

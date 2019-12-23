@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Bienvenue sur le site de l'épicerie fine des Fins Gourmets, vous pouvez trouver tous nos produits culinaire en ligne.">
+    <meta name="keywords" content="fins gourmets, gastronomie">
+    <title>Les Fins Gourmets</title>
+
+    
+
+    <!-----------FEUILLE DE STYLE DU SLIDER---------------->
+
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+
+    <!------FEUILLE DE STYLE-------->
+
+
+    <link rel="stylesheet" href="Public/CSS/styles.css">
+    <link rel="stylesheet" href="Public/CSS/mobile.css">
+    
+
+</head>
+
+<body>
+
+    <div id="cookies">
+        <span>
+            <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
+        </span>
+        <a class="accepter" href="#" onclick="masquerBandeauCookies()"> ✓ Ok, tout accepter</a>
+        <!---TARGET SERT A OUVRIR LA CIBLE D'UN LIEN DANS UNE NOUVELLE PAGE-->
+        <a class="savoirPlus" href="https://www.google.fr" target="_blank">En savoir plus</a>
+    </div>
+
+    <header class="front">
+        <!-------LOGIN-------->
+        <div class="connect">
+            <a href="login.html">Login</a>
+            <a href="inscription.html">Inscription</a>
+        </div>
+
+        <figure class="logo">
+            <img src="Public/Images/logos/les-fins-gourmets2.jpg" alt="les-fins-gourmets">
+        </figure>
+        <nav class="menuprincipal">
+            <!-------BURGER-------->
+            <input type="checkbox" id="menumobile" role="button">
+            <label for="menumobile" class="menumobile">
+                <img src="Public/Images/logos/burger.png">
+            </label>
+
+            <ul id="menuactive">
+                <li class="nav-item"><a href="index.html">Accueil</a></li>
+                <li class="nav-item"><a href="presentation.html">Présentation/à Propos</a></li>
+                <li class="nav-item"><a href="boutique.html">Boutique</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="contact.html">Contact/Accès</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!---SLIDER----NIVO SLIDER-->
+        <!----  <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="Public/Images/Photos/boeuf.jpg" alt="viande">
+                <img src="Public/Images/images1920/epices2.jpg" alt="épices">
+            </div>
+        </div>----->
+       
+               <div id="slider">
+                <img src="Public/Images/Photos/boeuf.jpg" width="1200" height="500" id="slide">
+                <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+                <div id="suivant" onclick="ChangeSlide(1)">></div>
+              </div>
+                
+                
+                
+                
+                
+
+
+                
+            
+        <h1>Bienvenue sur notre boutique</h1>
+
+
+
+
+        <!------SECTION GASTRONOMIE------>
+        <section class="gastronomie">
+
+            <article class="produits">
+                <a href="#">
+                    <img src="Public/Images/images1920/epicerie-rayons.jpg">
+                    <h2>Épicerie Fine</h2>
+                    <p>Que l'on soit Sucré ou Salé, notre épicerie élabore pour vous des recettes savoureuses et
+                        originales, dans le but de ravir les papilles des petits et grands.</p>
+                </a>
+            </article>
+
+            <article class="produits">
+                <a href="#">
+                    <img src="Public/Images/Photos/fraisier.jpg">
+                    <h2>Pâtisseries</h2>
+                    <p>Notre Pâtisserie est dédiée aux merveilleuses créations de notre talentueux chef pâtissier. Vous
+                        y découvrirez le plaisir simple que peut provoquer cet art gastronomique.</p>
+            </article>
+
+            <article class="produits">
+                <a href="#">
+                    <img src="Public/Images/Photos/macarons.jpg">
+                    <h2>Macarons</h2>
+                    <p>les Macarons sont devenus synonymes de tradition et de gourmandise à la Française, venez
+                        découvrir notre gamme aussi bien variées qu'exquise.</p>
+                </a>
+            </article>
+
+            <article class="produits">
+                <a href="#">
+                    <img src="Public/Images/Photos/nounours.jpg">
+                    <h2>Confiseries</h2>
+                    <p>Voyagez dans notre univers merveilleux de la confiserie. Au programme, découvrez nos bonbons
+                        acidulés, sucrés, dragéifiés ainsi que nos guimauves.</p>
+                </a>
+            </article>
+
+        </section>
+
+        <div class="videos">
+            <iframe width="460" height="215" src="https://www.youtube.com/embed/LVfSDSH8DGw" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="460" height="215" src="https://www.youtube.com/embed/4TIep6wROjw" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </main>
+    <!-----------FOOTER--------------->
+    <footer class="pied">
+        <aside class="bas">
+
+
+            <div class="liens">
+                <ul>
+                    <li><a href="boutique.html"> Boutique</a></li>
+                    <li><a href="cgv.html"> CGV</a></li>
+                    <li><a href="plandusite.html">Plan du site</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="page-404.html">Newsletter</a></li>
+                    <li><a href="page-404.html">Agenda</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="reseaux">
+                <ul>
+                    <li><a href="#"><img src="Public/Images/pictos/facebook1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/instagram1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/twitter1.png"></a></li>
+                    <li><a href="#"><img src="Public/Images/pictos/pinterest1 (1).png"></a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <p>&copy; Greta 2019 tous droits réservés - <a href="mentionslegales.html">Mentions Légales</a></p>
+
+
+    </footer>
+
+
+
+
+    <!--<script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>-->
+    <script type="text/javascript" src="Public/JS/cookie.js"></script>
+    <script type="text/javascript" src="Public/JS/slider.js"></script>
+    <script type="text/javascript" src="Public/JS/active.js"></script>
+
+    <script type="text/javascript">
+        menuActive(0);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0
+}
+body {
+    font-family: cursive, serif;
+    font-size: 16px;
+}
+.bandeau{
+    background-color: white;
+}
+.bandeau #cookie a{
+    text-decoration: none;
+    color: white;
+}
+.bandeau #conect button{
+    font-size: 1.2rem;
+}
+.bandeau .logo{
+    text-align: center;
+}
+.bandeau .logo img{
+    max-height: 275px;
+}
+#collapsibleNavbar{
+    justify-content: center;
+}
+.bandeau .navbar-nav{
+    font-size: 1.5rem;
+}
+.carousel-item img{
+    width: 100%;
+    max-height: 500px;
+}
+.presentation .rubrique h2 {
+    text-align: center;
+}
+
+.presentation .rubrique p {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+.presentation header{
+    text-align: center;
+    max-height: 40px;
+    margin: 20px 20px;
+    font-size: 1.5rem;
+}
+.presentation article{
+    margin-top:30px;
+}
+.presentation .rubrique img {
+    width: 25%;
+    height: 120px;
+    float: left;
+    margin-bottom: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px
+}
+.videos header {
+    width: 100%;
+    max-height: 40px;
+    margin: 20px 20px;
+    font-size: 1.5rem;
+}
+.videos h1{
+    text-align: center;
+}
+.videos iframe {
+    margin: 20px;
+    width: 29%;
+    max-height: 300px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+.pied .bas {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.pied .bas .liens {
+    width: 20%;
+    font-size: 1.4rem;
+}
+.pied .bas .liens ul {
+    list-style-type: none;
+    padding: 5px 0;
+    margin-top: 15px;
+    border-right: 1px double white
+}
+.pied .bas .liens ul li a {
+    color: white;
+    text-decoration: none;
+    font-style: italic
+}
+.pied .bas .liens ul li a:hover {
+    color: white;
+    text-decoration: underline
+}
+.pied .bas .reseaux img {
+    float: left;
+    width: 45px;
+    margin: 40px;
+    margin-top:35px;
+}
+.pied .bas .reseaux ul {
+    display: flex;
+    text-decoration: none;
+    padding-top: 15px
+}
+.pied .bas .reseaux ul li {
+    list-style-type: none;
+    width: 30%;
+    text-align: center
+}
+.pied p a {
+    text-decoration: none
+}
+
+.pied p a:hover {
+    text-decoration: underline;
+}
+/***********************************************************/
+#conception {
+    border: 3px double #4c3a74;
+    padding: 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+
+#conception h1 {
+    color: #4c3a74;
+    font-size: 25px;
+    text-align: center
+}
+
+#conception p {
+    color: #4c3a74;
+    font-size: 20px;
+    margin: 10px
+}
+/**************************************************************/
+.login {
+    padding: 20px 0;    
+}
+.login input {
+    margin: 10px;
+    text-align: center;
+    max-width: 45%;
+    margin: 0 auto;
+}
+.login .blocRadio{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+.login .blocRadio label {
+   margin-left: 130px;
+}
+.login .blocRadioSign{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+.login .blocRadioSign label{
+    margin-left: 75px;  
+}
+.login header{
+    text-align: center;
+    padding: 5px;
+}
+.login p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px
+}
+.login .form{
+    margin-top: 25px;
+}
+.login p label {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+}
+
+.login textarea {
+    text-align: center;
+    width: 100%;
+}
+.login .form a {
+    text-decoration: none;
+    color: #4c3a74
+}
+#acces {
+    min-height: 350px;
+    padding: 20px 10px
+}
+#acces header{
+    text-align: center;
+}
+#acces .adresse {
+    font-size: 25px
+}
+
+#acces address {
+    color: white;
+    font-style: italic;
+    font-size: 20px
+}
+#acces iframe {
+    margin: 10px 50px 10px 10px;
+    float: left
+}
+.login #preferance{
+    width: 50%;
+    margin: 0 auto;
+}
+#modalConnect{
+    text-align: center;
+}
+#modalSign{
+    text-align: center;
+}
+/**********************************************************/
+#tuto {
+    border: 3px double #4c3a74;
+    padding: 10px 10px;
+    margin: 15px 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+
+#tuto h1 {
+    text-align: center;
+    margin: 15px;
+    color: #4c3a74;
+    font-size: 25px
+}
+
+#tuto iframe {
+    width: 40%;
+    margin: 20px
+}
+
+#tuto .entrée,
+.plat,
+.dessert {
+    text-align: center
+}
+
+#erreur {
+    border: 3px double #f27e52;
+    color: #4c3a74;
+    font-size: 25px
+}
+
+#sitemap {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 3px double #4c3a74;
+    text-align: center;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+
+#sitemap ul {
+    list-style-type: none
+}
+
+#sitemap li {
+    margin: 10px 10px
+}
+
+#sitemap a {
+    text-decoration: none;
+    color: #4c3a74;
+    font-size: 25px
+}
+
+#sitemap a:hover {
+    font-size: 30px;
+    color: white;
+    text-decoration: underline
+}
+
+#mention {
+    border: 3px double #4c3a74;
+    color: #4c3a74;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px
+}
+
+#mention a {
+    color: #4c3a74
+}
+
+#mention a:hover {
+    color: white
+}
+
+@media screen and (max-width:768px) {
+    body {
+        font-family: cursive, Times, serif;
+        font-size: 17px;
+        background-color: #4c3a74
+    }
+
+    .bandeau .connexion {
+        margin-left: 30px
+    }
+
+    .bandeau .connexion a {
+        width: 30%;
+        display: flex;
+        float: left;
+        padding-left: 15px
+    }
+
+    .bandeau .connexion a:hover {
+        border-right: none
+    }
+
+    .logo img {
+        margin: 0 auto
+    }
+
+    .menuprincipal {
+        position: relative
+    }
+
+    .menuprincipal ul li {
+        display: block;
+        margin-bottom: 10px;
+        line-height: 34px;
+        font-size: 1.2rem
+    }
+
+    .menuprincipal ul {
+        display: none
+    }
+
+    .menuprincipal .menumobile img {
+        width: 40px
+    }
+
+    .menuprincipal .menumobile img:hover {
+        cursor: pointer
+    }
+
+    .menuprincipal .menumobile {
+        display: block;
+        padding-bottom: 20px
+    }
+
+    .menuprincipal [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: absolute;
+        left: -9999px
+    }
+
+    .menuprincipal [type="checkbox"]:checked+label+ul {
+        display: block
+    }
+
+    .presentation {
+        border-top: solid 3px #f27e52
+    }
+
+    .presentation .rubrique {
+        width: 100%;
+        border-bottom: solid 3px #f27e52;
+        padding-bottom: 20px
+    }
+
+    .presentation h1,
+    a {
+        width: 100%;
+        color: #4c3a74;
+        text-align: center
+    }
+
+    .presentation img {
+        display: none
+    }
+
+    .presentation p {
+        color: #f27e52
+    }
+
+    .videos {
+        width: 100%;
+        border-bottom: solid 3px #f27e52
+    }
+
+    .videos h1,
+    a {
+        width: 100%;
+        color: #4c3a74
+    }
+
+    .videos iframe {
+        width: 80%;
+        margin-left: 30px;
+        margin-top: 30px
+    }
+
+    .videos article {
+        margin-top: 50px
+    }
+
+    .bas .liens {
+        display: none
+    }
+
+    .pied p,
+    .pied p a {
+        color: #f27e52;
+        font-size: 13px
+    }
+
+    #contact {
+        border-top: 3px double #f27e52
+    }
+
+    #contact p {
+        color: #f27e52
+    }
+
+    #contact fieldset .colonne {
+        width: 98%
+    }
+
+    #contact fieldset #message {
+        width: 98%
+    }
+
+    #contact p input[type=submit],
+    #contact p input[type=reset] {
+        background-color: #f27e52;
+        color: #4c3a74
+    }
+
+    #contact p input[type=submit]:hover,
+    #contact p input[type=reset]:hover {
+        background-color: white;
+        color: #4c3a74
+    }
+
+    #acces .adresse {
+        color: white
+    }
+
+    #acces address {
+        text-align: center;
+        color: #f27e52
+    }
+
+    #acces iframe {
+        width: 98%;
+        margin-bottom: 20px
+    }
+
+    #acces a {
+        text-decoration: none;
+        color: white
+    }
+
+    #acces a:hover {
+        color: #f27e52
+    }
+
+    #login {
+        border-top: 3px double #f27e52
+    }
+
+    #login p {
+        color: #f27e52
+    }
+
+    #login fieldset legend {
+        color: #f27e52
+    }
+
+    #login fieldset {
+        width: 98%
+    }
+
+    #login fieldset input:hover,
+    #login fieldset textarea:hover {
+        background-color: #f27e52;
+        color: #4c3a74
+    }
+
+    #login fieldset input:focus,
+    #login fieldset textarea:focus {
+        background-color: #4c3a74;
+        color: #f27e52;
+        border: none
+    }
+
+    #login p input[type=submit],
+    #login p input[type=reset] {
+        background-color: #f27e52;
+        color: #f27e52
+    }
+
+    #login p input[type=submit],
+    #login p input[type=reset] {
+        background-color: #f27e52;
+        color: #4c3a74;
+        border: double 3px #f27e52
+    }
+
+    #login p input[type=submit]:hover,
+    #login p input[type=reset]:hover {
+        background-color: white;
+        color: #4c3a74
+    }
+
+    #login .form a {
+        color: #f27e52
+    }
+
+    #login .form a:hover {
+        color: white
+    }
+
+    #login #preferance {
+        display: none
+    }
+
+    #tuto {
+        border: 3px double #f27e52
+    }
+
+    #tuto h1 {
+        color: #f27e52
+    }
+
+    #tuto iframe {
+        width: 80%
+    }
+
+    #conception {
+        border: 3px double #f27e52
+    }
+
+    #conception p,
+    #conception h1 {
+        color: #f27e52
+    }
+}
+/*--------test slider------------*/
+#slide{
+    text-align: center;
+}
+#slider1 {
+    position: relative;
+    margin: auto;
+}
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 1.0s ease;
+    opacity: 0;
+    position: absolute;
+    top: 175px;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    -webkit-transition: opacity 1.0s ease;
+    -moz-transition: opacity 1.0s ease;
+    -ms-transition: opacity 1.0s ease;
+    -o-transition: opacity 1.0s ease;   
+}
+
+#precedent {
+    left: 0;
+    margin-left: 20px;
+}
+
+#suivant {
+    right: 0;
+    margin-right: 20px;
+}
+
+#slider1:hover #precedent, #slider1:hover #suivant {
+    opacity: 1;
+}
+#slide2{
+    width: 1080px;
+    height: 500px;
+}

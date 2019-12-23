@@ -1,0 +1,40 @@
+.inscription fieldset{
+
+    border: 3px solid #000000;
+}
+
+.inscription fieldset legend{
+    font-weight: bold;
+}
+
+/*-----MET DE LA MARGE ENTRE LES LABELS----*/
+.add p {
+    margin: 10px 0;
+}
+
+/*-----ALIGNER LES LABEL EN VERTICAL*/
+.add p label {
+    display: inline-block;
+    /*---LES LABELS PEUVENT S'ALIGNER HORIZONTALEMENT EN PRENANT 130 PX DE LA LONGUEUR----*/
+    width: 130px;
+}
+
+/*----SERT A CENTRER LES TEXTES INPUT---*/
+.inscription fieldset input {
+    text-align: center;
+}
+
+.inscription #bouton_envoie,
+.inscription button[type=reset] {
+    /*---AGRANDI L'ESPACE INTERIEUR DE L'INPUT---*/
+    padding: 5px 15px;
+    background-color: grey;
+    border: none;
+    /*-----ARRONDIR LES BORDURES DES INPUT-----*/
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    /*---MET UNE MARGE ENTRE LES INPUT---*/
+    margin: 10px;
+
+
+}

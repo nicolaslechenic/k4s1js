@@ -1,0 +1,333 @@
+/*--ANNULE LES MARGES EXTERNE ET INTERNE DE TOUS LES ELEMENTS
+POUR AVOIR UN RENDU EQUIVALENT DE BASE PAR DEFAULT*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #778899;
+
+}
+
+.container {
+    /* largeur maximale:1170px*/
+    max-width: 1170px;
+    /* quand taille de l'ecran diminue, la taille est automatiquement adaptée*/
+    width: 100%;
+    /*centrage du bloc*/
+    margin: 0 auto;
+
+}
+#cookies{
+    height: 60px;
+    text-align: center;
+    background-color: #A52A2A;
+    border: 4px solid white;
+}
+#cookies span{
+    position: relative;
+    top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#cookies a{
+    position: relative;
+    top: 15px;
+}
+
+/*-----HEADER-------*/
+.front .connect {
+    text-align: right;
+    background-color: black;
+
+
+
+}
+
+.front .connect a {
+    /*----ENLEVE LE SOULIGNEMENT ET LA COULEUR BLEU----*/
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 50px;
+
+}
+
+.front .connect a:hover {
+    /*----FAIT GROSSIR LE SURVOL ET LE COLOR EN GRIS-----*/
+    font-size: 20px;
+    color: #76797c;
+}
+
+.front {
+    /*----CENTRER LE LOGO-----*/
+    text-align: center;
+    background-color: white;
+
+
+
+}
+
+.logo img {
+    /*----METTRE UN PEU D'ESPACE ENTRE LE LOGO ET LE MENU NAV---*/
+    padding-bottom: 20px;
+    width: 300px;
+    height: 250px;
+}
+
+
+/*-------Menu principal-------*/
+.menuprincipal {
+    background-color: #20201f;
+    /*----MET UN PEU D'ESPACE EN HAUT ET EN BAS DU MENU---*/
+    padding: 5px;
+
+
+
+}
+
+.menuprincipal ul li {
+    /*----ALIGNER LE MENU HORIZONTALEMENT---*/
+    display: inline;
+    /*----ECARTE LES ELEMENTS----*/
+    margin-right: 50px;
+    padding-right: 50px;
+
+
+
+
+}
+
+.menuprincipal ul li a {
+    color: #A52A2A;
+    /*color: rgb(243, 237, 234);*/
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.menuprincipal ul li a:hover {
+    font-size: 20px;
+    color: #76797c;
+
+
+}
+.active{
+   border: 2px solid purple;
+}
+
+/*----------FAIRE DISPARAITRE LE BURGER----------*/
+.menuprincipal #menumobile,
+.menuprincipal .menumobile {
+    display: none;
+}
+
+/*-------SLIDER-------*/
+.nivoSlider img {
+    max-height: 500px;
+    width: 100%;
+}
+/*---ENLEVE LES PUCES DU SLIDER----*/
+/*.nivo-controlNav {
+    display: none;
+}*/
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #2b254e;
+    padding-top: 5px;
+    font-style: italic;
+}
+/*-----SLIDER JS-----*/
+
+
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 550px;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+#precedent {
+    left: 175px;
+}
+
+#suivant {
+    right: 145px;
+}
+
+#slider:hover #precedent, #slider:hover #suivant {
+    opacity: 1;
+}
+/*-----SECTION GASTRONOMIE------*/
+.gastronomie {
+    /*---SERT A ALIGENR HORIZONTALEMENT---*/
+    display: flex;
+    /*---SERT A FAIRE PASSER A LA LIGNE---*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid rgb(73, 66, 66);
+    border-radius: 20px;
+    padding-bottom: 40px;
+    /*---MET DE L'ESPACE AVEC LE H1---*/
+    margin-top: 30px;
+    
+
+    
+}
+
+.gastronomie .produits {
+    
+    /*---CHAQUE ARTICLE PREND 40% DE LA LONGUEUR ET LEUR PERMET DE SE SUPERPOSER----*/
+    width: 40%;
+    /*----MET UNE MARGE ET EVITE QUE LE PARAGRAPHE NE TOUCHE L'IMAGE----*/
+    margin: 20px;
+    padding: 20px;
+    
+
+
+}
+
+.gastronomie .produits img {
+    width: 50%;
+    height: 80%;
+    margin-left: 115px;
+    margin-bottom: 10px;
+    
+    
+    /*------ARRONDIR LES PHOTOS ET LES RENDRES OPAQUES------*/
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+.gastronomie .produits img:hover {
+    opacity: .5;
+}
+
+
+.gastronomie .produits h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*---CENTRER LE TITRE H2 SOUS L'IMAGE----*/
+    margin-left: 160px;
+    color: #A52A2A;
+    text-decoration: underline;
+
+}
+
+.gastronomie .produits p {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.gastronomie .produits a {
+    text-decoration: none;
+    color: black;
+}
+
+.videos {
+    
+    /*----CENTRE LES 2 VIDEOS---*/
+    margin-left: 120px;
+    padding-top: 15px;
+}
+
+
+/*----------FOOTER-------*/
+
+.pied .bas {
+    /*---SERT A ALIGNER HORIZONTALEMENT TOUTE LA DIV----*/
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.pied .bas .liens {
+    padding-top: 40px;
+}
+
+.pied .bas .liens ul {
+    /*---SERT A ALIGNER HORIZONTALEMENT LES ELEMENTS----*/
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-top: 20px;
+
+}
+
+.pied .bas .liens ul li {
+    /*color: #8B0000;*/
+    /*----SERT A METTRE UN ECART AVEC LA BORDURE---*/
+    padding: 10px;
+    border-right: 3px solid #4f7477;
+    /*----SERT A METTRE UN ECART SUR LES ELEMENTS ENTRE EUX---*/
+    margin-right: 50px;
+
+
+
+
+}
+
+.pied .bas .liens a {
+    text-decoration: none;
+    margin-bottom: 10px;
+
+
+
+}
+
+.pied .bas .liens a:hover {
+    color: #76797c;
+}
+
+/*----CENTRER LA MENTION LEGALE---*/
+p {
+    text-align: center;
+}
+
+/*------FOOTER RESEAUX------*/
+
+.bas .reseaux ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    /*----DESCENDRE LES RESEAUX AU MEME NIVEAU QUE LE MENU---*/
+    padding-top: 40px;
+    /*---PERMET AUX ELEMENTS DE S'ETIRER EN HAUTEUR---*/
+    min-height: 110px;
+}
+
+.bas .reseaux ul li {
+    /*---METTRE DE L'ESPACE ENTRE LES IMAGES---*/
+    padding: 0 15px;
+    list-style-type: none;
+    margin-top: 35px;
+
+}
+
+.bas .reseaux ul li a img {
+
+    width: 40px;
+
+}

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>Jeux de mômes, notre blog.</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- referencement -->
+        <meta name="keywords" content="DIY mômes">
+        <meta
+            name="description"
+            content="Bienvenue sur notre site Jeux de mômes ! Notre blog avec tout os tutos !">
+        <!--faire une description différente pour chaque page-->
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+        <!-- feuilles de styles -->
+        <link rel="stylesheet" href="public/css/media.css">
+        <link rel="stylesheet" href="public/css/menu.css">
+        <link rel="stylesheet" href="public/css/style.css">
+        <!-- permets d'afficher les icons plus vite -->
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <div class="container-fluid">
+            <header id="top" class="container-fluid-sm">
+                 <!-- barre connection -->
+                 <div
+                 id="connect"
+                 class="navbar navbar-expand-sm justify-content-end .fixed-top">
+                 <form class=" connexion form-inline " action="/action_page.php">
+                     <input
+                         class="connect form-control mr-sm-2 border border-warning btn-sm"
+                         type="email"
+                         placeholder="Mail"
+                         id="mailConnection"
+                         required
+                         >
+                     <input
+                         class="connect form-control mr-sm-2 border border-warning btn-sm"
+                         type="password"
+                         placeholder="Mot de passe"
+                         id="pwdConnection"
+                         required
+                         >
+                     <button
+                         id="login"
+                         class="btn btn-outline-warning font-weight-bold mr-3"
+                         type="submit">Se connecter</button>
+                 </form>
+                    <!-- modal button -->
+                    <button
+                        type="button"
+                        class="btn pl-3 m-1"
+                        data-toggle="modal"
+                        data-target="#myModal"><img
+                        src="public/pictos/question.png"
+                        alt="question"
+                        title="Pas encore inscit ?"></button>
+
+                    <!-- The Modal -->
+                    <div class="modal fade " id="myModal">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div id="titre" class="modal-header mb-3 justify-content-center">
+                                    <h4 class="modal-title">Bienvenue chez Jeux de mômes !</h4>
+                                </div>
+
+                                <!-- Modal body -->
+                                <form class="row" method="post" action="traitement.php">
+                                    <div class="input-group col-12 mb-2">
+                                        <div class="input-group-prepend col-3">
+                                            <select class="form-control" id="sel1">
+                                                <option>Madame</option>
+                                                <option>Monsieur</option>
+                                            </select>
+                                        </div>
+
+                                        <input
+                                            onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"
+                                            type="text"
+                                            class="form-control col-3"
+                                            placeholder="nom"
+                                            id="nomM"
+                                            required="required">
+                                        <i
+                                            id="mod"
+                                            style='font-size:24px'
+                                            class='fas col-1 mt-2'
+                                            title=" ! = adresse manquante  X = format incorrect"></i>
+
+                                        <input
+                                            onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"
+                                            type="text"
+                                            class="form-control col-3"
+                                            placeholder="prénom"
+                                            id="prenomM"
+                                            required="required">
+                                        <i
+                                            id="mod1"
+                                            style='font-size:24px'
+                                            class='fas col-1 mt-2'
+                                            title=" ! = adresse manquante  X = format incorrect"></i>
+
+                                    </div>
+                                    <!-- modal mail -->
+                                    <div class="input-group col-12 mb-3">
+                                        <label for="mailM" class="col-3">Adresse mail:</label>
+                                        <input
+                                            type="email"
+                                            class="col-8 form-control"
+                                            id="mailM"
+                                            placeholder="Your Email"
+                                            required="required">
+
+                                        <i
+                                            id="mod2"
+                                            style='font-size:24px'
+                                            class='fas col-1 mt-2'
+                                            title=" ! = adresse manquante  X = format incorrect"></i>
+
+                                    </div>
+                                    <!-- modal mdp -->
+                                    <div class="input-group col-12 mb-3">
+                                        <label for="pwdM" class="col-3">Password:</label>
+                                        <input
+                                            type="password"
+                                            class=" col-8 form-control"
+                                            id="pwdM"
+                                            name="password" required>
+                                        <i
+                                            id="mod3"
+                                            style='font-size:24px'
+                                            class='fas col-1 mt-2'
+                                            title=" ! = adresse manquante  X = format incorrect"></i>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        value="envoyer"
+                                        id="envoyer"
+                                        class="btnLogin btn col-3 mb-3 mx-auto">Envoyer</button>
+                                    <button
+                                        type="reset"
+                                        value="Annuler"
+                                        id=""
+                                        class="btncancel btn col-3 mb-3 mx-auto">Annuler</button>
+                                </form>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="row">
+                    <figure id="borderLogo" class=" rounded-circle shadow  bg-white">
+                        <img
+                            src="public/logos/jeux-de-momes2.png"
+                            alt="logo jeux de mômes"
+                            class="img-fluid"
+                            id="logo">
+                    </figure>
+                    <!-- menuprincipal -->
+                    <nav id="menu" class="navbar navbar-expand-md navbar-light">
+
+                        <button
+                            class=" menuBurger navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                            <img src="public/pictos/menu.png" alt="menu burger"/>
+                        </button>
+
+                        <!-- liens -->
+                        <div id="collapsibleNavbar" class="burger collapse navbar-collapse ">
+
+                            <ul
+                                id="menuActive"
+                                class=" navmenu navbar-nav justify-content-center"
+                                role="tablist">
+                                <li class="nav-item main-nav">
+
+                                    <a class="nav-link font-weight-bold text-white " href="index.html"><img src="public/pictos/bear.png" alt="icon ours">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="a-propos.html"><img src="public/pictos/penguin.png" alt="icon manchot">A propos</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="blog.html"><img src="public/pictos/ducky.png" alt="icon canard">Blog</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="boutique.html"><img src="public/pictos/fish.png" alt="icon poisson">Boutique</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a class="nav-link font-weight-bold text-white" href="contact.html"><img src="public/pictos/bird.png" alt="icon piaf">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <main id="principal" class="page container ">
+
+                <div class="bloc row m-5 ">
+                    <h2 class="titrepage col-10 col-sm-12 m-4">Activités pour les bouts de choux de 0 à 3 ans !</h2>
+                    <figure class="trio col-10 col-sm-12 m-4">
+                        <img class="col-3 " src="public/images/massage-bebe.jpg" alt="massage bébé">
+                        <img
+                            class="col-3 "
+                            src="public/images/marionnette-bebe.jpg"
+                            alt="gant marionnette bébé">
+                        <img
+                            class="col-3 "
+                            src="public/images/lire-histoire-bebe.jpg"
+                            alt="lecture bébé">
+                    </figure>
+                    <p class="col-10 col-sm-12 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque
+                        vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Aliquam placerat sem at mauris suscipit
+                        porta. Cras metus velit, elementum sed pellentesque a, pharetra eu eros. Etiam
+                        facilisis placerat euismod. Nam faucibus neque arcu, quis accumsan leo tincidunt
+                        varius. In vel diam enim. Sed id ultrices ligula. Maecenas at urna arcu. Sed
+                        quis nulla sapien. Nam felis mauris, tincidunt at convallis id, tempor molestie
+                        libero. Quisque viverra sollicitudin nisl sit amet hendrerit. Etiam sit amet
+                        arcu sem. Morbi eu nibh condimentum, interdum est quis, tempor nisi. Vivamus
+                        convallis erat in pharetra elementum. Phasellus metus neque, commodo vitae
+                        venenatis sed, pellentesque non purus. Pellentesque egestas convallis suscipit.
+                        Ut luctus, leo quis porta vulputate, purus purus pellentesque ex, id consequat
+                        mi nisl quis eros. Integer ornare libero quis risus fermentum consequat. Mauris
+                        pharetra odio sagittis, vulputate magna at, lobortis nulla. Proin efficitur,
+                        nisi vel finibus elementum, orci sem volutpat eros, eget ultrices velit mi
+                        sagittis massa. Vestibulum sagittis ullamcorper cursus. Ut turpis dolor, tempor
+                        ut tellus et, sodales ultricies elit. Ut pharetra tristique est ac dictum.
+                        Integer ac consectetur purus, vehicula efficitur urna. Donec ultrices accumsan
+                        ipsum vitae faucibus. Quisque malesuada ex nisi, a bibendum erat commodo in.
+                        Pellentesque suscipit varius gravida. Nam scelerisque est sit amet laoreet
+                        pharetra. Vivamus quis ligula sed lacus mattis mollis. Vivamus facilisis orci
+                        rutrum nulla porta dignissim. Fusce fermentum id nibh laoreet volutpat.
+                        Suspendisse venenatis, risus sed euismod finibus, risus arcu fringilla augue,
+                        nec vulputate felis nisl et enim. In ornare, massa a cursus cursus, nisl mi
+                        ornare mauris, nec porttitor risus erat ut odio. Integer malesuada hendrerit
+                        purus ullamcorper molestie. Fusce imperdiet orci vitae purus suscipit rutrum..</p>
+
+                </div>
+
+            </main>
+
+            <footer id="bottom" class="container-fluid-sm">
+                <div id="borderFoot" class="col-12"></div>
+                <div id="blocFoot" class="col-12">
+                    <div id="blocLiens" class="row">
+                        <div class=" liens liensmedia col-3">
+                            <h3>Nos coups de coeur</h3>
+                            <div class="col-12">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=qt_mLlfKuw4"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Yoga pour les petits</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.hugolescargot.com/coloriages/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Pleins de coloriages à imprimer !</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://tidou.fr/4-6-ans"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Jeux numériques à partir de 2 ans !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.leroymerlin.fr/v3/p/services/cours-de-bricolage/atelier-enfant-diy-1h30-2h-e1400662672"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Cours de briloges à partir de 6 ans !</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="liens liensmedia col-3">
+                            <h3>Notre liste utile</h3>
+                            <div class="col-12">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://www.parents.fr/enfant/sante/enfant-hyperactif/les-enfants-hyperactifs-78490"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Nos enfants hyperactifs !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.enfant.com/mode-de-garde/creche/ladaptation-en-creche-comment-ca-marche/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            La créche, par où commencer ?</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.pipi-au-lit.net/"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Le pipi au lit !</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.passeportsante.net/fr/grossesse/Fiche.aspx?doc=enceinte-vegetarienne"><img src="public/pictos/puzzle.png" alt="picto">
+                                            Enceinte et végétarienne !</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=" liens col-6 col-sm-3">
+                            <h3>Nos idées boutiques</h3>
+                            <div class=" logo col-12 justify-content-center ">
+                                <a href="https://www.oxybul.com/"><img src="public/images/oxy.png" class="rounded-circle" alt="logo oxybul"></a>
+                                <a
+                                    href="https://www.king-jouet.com/jeux-jouets/jeux-eveil/activites-eveil/page1.htm"><img src="public/images/king.png" class="rounded-circle" alt="logo king jouet"></a>
+                                <a href="https://www.natureetdecouvertes.com/"><img
+                                    src="public/images/nature.png"
+                                    class="rounded-circle"
+                                    alt="logo nature et decouverte"></a>
+                                <a href="https://www.petit-bateau.fr/"><img
+                                    src="public/images/bateau.png"
+                                    class="rounded-circle"
+                                    alt="logo petit bateau"></a>
+                            </div>
+                        </div>
+                        <div class=" liens col-6 col-sm-3">
+                            <h3>Nos réseaux sociaux</h3>
+                            <div class="logo col-12">
+                                <a href="https://www.facebook.com/"><img src="public/pictos/picto-facebook.png" alt="facebook"></a>
+                                <a href="https://www.instagram.com/?hl=fr"><img src="public/pictos/picto-insta.png" alt="instagram"></a>
+                                <a href="https://www.youtube.com/"><img src="public/pictos/picto-youtube.png" alt="youtube"></a>
+                            </div>
+
+                        </div>
+                        <div class="mention col-12 m-2">
+                            &copy;2019 Jeux de mômes - Tous droits réservés -
+                            <a class="col-3" href="sitemap.xml">Plan du site -
+                            </a>
+                            <a class="col-3" href="politique.html">politique de confidentialité -
+                            </a>
+                            <a class="col-3" href="mentions.html">mentions légales</a>
+                        </div>
+                    </div>
+                    <div id="cookie-bar" style='display:none' onclick="hideNow(event)">>
+                        <div class="cookie">
+                            Ce site web utilise des cookies -
+                            <a id='cookie-policy' href='cookie.html'>
+                                Consulter notre politique des cookies !
+                            </a>
+                            Vous préférez les p'tits Lu ? Vous pouvez stopper l'utilisation des cookies
+                            <button id='stop-cookie'>en cliquant ici</button>
+
+                            Ou bien :
+                            <button id="agree" onclick="PopUp('hide')">J'accepte</button>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+
+        <script src="public/js/modal.js"></script>
+        <script src="public/js/active.js"></script>
+        <script src="public/js/btnTop.js"></script>
+        <script src="public/js/connect.js"></script>
+
+        <script>
+            menuAct(2);
+        </script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+            defer="defer"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+            defer="defer"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+            defer="defer"></script>
+    </body>
+</html>
